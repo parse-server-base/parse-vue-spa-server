@@ -7,8 +7,10 @@
     "kill:1337": "kill $(lsof -t -i:1337)",
     "kill:8081": "kill $(lsof -t -i:8081)",
     "server:prod": "ENV=prod yarn build; ENV=prod node server/index.js",
+    "start": "yarn server:prod",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@parse/s3-files-adapter": "^1.4.0",
