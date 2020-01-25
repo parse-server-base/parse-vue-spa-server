@@ -5,6 +5,8 @@ const serverConfig = require('./configs/server')
 const app = express();
 
 const HOST_URL = process.env.HOST_URL || 'localhost'
+const port = process.env.PORT || 1337
+
 Parse.initialize(process.env.APP_ID,null,process.env.MASTER_KEY);
 
 const parseServer = new ParseServer({ ...serverConfig });
@@ -42,6 +44,6 @@ if(process.env.ENV === 'prod') {
     app.use('/', express.static('dist'))
 }
 
-app.listen(1337, function() {
-  console.log(`parse-server-example running on port: http://${HOST_URL}:1337.`);
+app.listen(port, function() {
+  console.log(`parse-server-example running on port: http://${HOST_URL}:${port}.`);
 });
