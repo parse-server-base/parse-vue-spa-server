@@ -1,6 +1,7 @@
 # parse-vue-spa-server
 This is a parse-server  project, with default config for `dashboard`, `graphQL` and `vue`(SPA not nuxt). Helping you to setup everything within a minute. 
 
+[demo](https://parse-vue-spa-server.herokuapp.com/#/secret)
 
 ## vue-spa 
 `http://localhost:8081/#/secret` (dev) or `http://localhost:1337/#/secret` (prod)
